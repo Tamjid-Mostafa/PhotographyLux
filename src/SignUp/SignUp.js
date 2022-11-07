@@ -1,29 +1,82 @@
-import React from "react";
+import { GoogleAuthProvider } from "firebase/auth";
+import React, { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import logo from "../../src/logo.png";
+import { AuthContext } from "../context/AuthProvider";
 
 const SignUp = () => {
+  const [error, setError] = useState("");
+  const {
+    providerGoogleSignIn,
+    providerGithubSignIn,
+    providerCreateUser,
+    updateUserProfile,
+    verifyEmail,
+  } = useContext(AuthContext);
+
+  /* -----------Google Sign In Handler------------ */
+
+  const googleProvider = new GoogleAuthProvider();
+
+  const handleGoogleSignIn = () => {
+    providerGoogleSignIn(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  /* Create user with Email Password*/
+  const handleSignUpUSer = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, email, password);
+
+    providerCreateUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setError("");
+        form.reset();
+        toast.success("Account Created successfully.");
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+        toast.error(error.message.slice(22, -2));
+      });
+  };
+
   return (
     <div>
-      <section class="bg-gray-50 dark:bg-gray-900">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <a
-            href="#"
-            class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+      <section className="bg-gray-50 dark:bg-gray-900">
+        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+          <Link
+            to="/"
+            className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
           >
-            <img class="w-8 mr-2" src={logo} alt="logo" />
+            <img className="w-8 mr-2" src={logo} alt="logo" />
             PhotgraphyLux
-          </a>
-          <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                Sign Up 
+          </Link>
+          <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                Sign Up
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
+              <form
+                onSubmit={handleSignUpUSer}
+                className="space-y-4 md:space-y-6"
+                action="#"
+              >
                 <div>
                   <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    htmlFor="email"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Your email
                   </label>
@@ -31,15 +84,15 @@ const SignUp = () => {
                     type="email"
                     name="email"
                     id="email"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
                     required=""
                   />
                 </div>
                 <div>
                   <label
-                    for="password"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    htmlFor="password"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Password
                   </label>
@@ -48,25 +101,25 @@ const SignUp = () => {
                     name="password"
                     id="password"
                     placeholder="••••••••"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required=""
                   />
                 </div>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-start">
-                    <div class="flex items-center h-5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-start">
+                    <div className="flex items-center h-5">
                       <input
                         id="remember"
                         aria-describedby="remember"
                         type="checkbox"
-                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-cyan-600 dark:ring-offset-gray-800"
+                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-cyan-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-cyan-600 dark:ring-offset-gray-800"
                         required=""
                       />
                     </div>
-                    <div class="ml-3 text-sm">
+                    <div className="ml-3 text-sm">
                       <label
-                        for="remember"
-                        class="text-gray-500 dark:text-gray-300"
+                        htmlFor="remember"
+                        className="text-gray-500 dark:text-gray-300"
                       >
                         Remember me
                       </label>
@@ -74,22 +127,22 @@ const SignUp = () => {
                   </div>
                   <Link
                     to="/forgot_password"
-                    class="text-sm font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                    className="text-sm font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                   >
                     Forgot password?
                   </Link>
                 </div>
                 <button
                   type="submit"
-                  class="w-full text-white bg-cyan-400 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+                  className="w-full text-white bg-cyan-400 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                 >
                   Sign Up
                 </button>
-                <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Already, an User? go to {" "}
+                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                  Already, an User? go to{" "}
                   <Link
                     to="/signup"
-                    class="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                   >
                     Log In
                   </Link>
@@ -97,7 +150,7 @@ const SignUp = () => {
               </form>
               <div className="flex gap-2  items-center">
                 <button
-                  
+                  onClick={handleGoogleSignIn}
                   className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                 >
                   <div className="bg-white p-2 rounded-full">
@@ -122,8 +175,11 @@ const SignUp = () => {
                   </div>
                   <span className="ml-2">Sign Up with Google</span>
                 </button>
-                   
-                <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline ">
+
+                <button
+                  onClick={providerGithubSignIn}
+                  className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline "
+                >
                   <div className="bg-white p-1 rounded-full">
                     <svg className="w-6" viewBox="0 0 32 32">
                       <path

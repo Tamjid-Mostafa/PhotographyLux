@@ -7,23 +7,23 @@ const Home = () => {
     }
   return (
     <div
-      class="relative bg-cover bg-no-repeat bg-center h-screen"
+      className="relative bg-cover bg-no-repeat bg-center h-screen"
       style={myStyle}
       title="Bali, Indonesia"
     >
         
-      <div class="flex flex-col justify-center items-center absolute inset-0 bg-black opacity-75 text-center text-white p-10">
-        <h2 class="font-serif text-2xl md:text-3xl">
+      <div className="flex flex-col justify-center items-center absolute inset-0 bg-black opacity-75 text-center text-white p-10">
+        <h2 className="font-serif text-2xl md:text-3xl">
           Finding customers for your new business
         </h2>
         <p>
           Getting a new business off the ground is a lot of hard work. Here are
           five ideas you can use to find syour first customers.
         </p>
-        <button class="bg-transparent hover:bg-white text-white font-bold hover:text-black py-2 px-4 my-4 border border-white rounded inline-flex items-center">
+        <button className="bg-transparent hover:bg-white text-white font-bold hover:text-black py-2 px-4 my-4 border border-white rounded inline-flex items-center">
           <span>Find out more</span>
           <svg
-            class="ml-2 w-4 h-4 fill-current"
+            className="ml-2 w-4 h-4 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
