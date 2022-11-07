@@ -1,12 +1,13 @@
 import { Avatar, DarkThemeToggle, Dropdown, Flowbite, Navbar } from "flowbite-react";
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../logo.png";
 
 const Header = () => {
   return (
     <>
-      <Navbar fluid={false} rounded={false}>
-        <Navbar.Brand href="https://flowbite.com/">
+      <Navbar className="" fluid={true} rounded={false}>
+        <Navbar.Brand to="https://flowbite.com/">
           <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             PhotographyLux
@@ -36,20 +37,22 @@ const Header = () => {
             <Dropdown.Divider />
             <Dropdown.Item>Sign out</Dropdown.Item>
           </Dropdown>
+          <Flowbite>
+              <DarkThemeToggle />
+            </Flowbite>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" active={true}>
-            Home
+          <Navbar.Link active={true}>
+          <Link to="/">Home</Link>
           </Navbar.Link>
-          <Navbar.Link href="/navbars">About</Navbar.Link>
-          <Navbar.Link href="/navbars">Services</Navbar.Link>
-          <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-          <Navbar.Link href="/navbars">Contact</Navbar.Link>
+          <Navbar.Link></Navbar.Link>
+          <Navbar.Link><Link to="/Services">Services</Link></Navbar.Link>
+          <Navbar.Link><Link to="/Pricing">Pricing</Link></Navbar.Link>
+          <Navbar.Link><Link to="/Contact">Contact</Link></Navbar.Link>
+          <Navbar.Link><Link to="/login">Log In</Link></Navbar.Link>
+          <Navbar.Link><Link to="/signup">Sign Up</Link></Navbar.Link>
         </Navbar.Collapse>
-        <Flowbite>
-          <DarkThemeToggle />
-        </Flowbite>
       </Navbar>
     </>
   );
