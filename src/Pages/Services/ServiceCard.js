@@ -3,19 +3,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const { photo, service_name, description } = service;
+  const { _id, photo, service_name, description,price } = service;
   return (
     <div className="max-w-sm">
-      <Card className="h-[33rem]" imgSrc={photo}>
+      <Card className="h-[34rem]" imgSrc={photo}>
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {service_name}
         </h5>
         <p className="font-normal text-gray-700 dark:text-gray-400">
           {description.slice(0,100)}...
         </p>
+        <p className="font-normal text-gray-700 dark:text-cyan-400">
+          Price: ${price}
+        </p>
         <Link
-        to="/serviceDetails"
-        className="group relative flex mx-auto h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800"
+        to={`/serviceDetails/${_id}`}
+        className="group relative bottom-0 flex mx-auto h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

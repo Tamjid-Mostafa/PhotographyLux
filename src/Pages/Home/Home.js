@@ -1,13 +1,14 @@
+import { Button } from "flowbite-react";
 import React from "react";
 import Services from "../Services/Services";
 import Banner from "./Banner";
 
 const Home = () => {
-    
   return (
     <>
-    <Banner></Banner>
-    <Services></Services>
+      <Banner></Banner>
+      <Services></Services>
+      
     </>
   );
 };

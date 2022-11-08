@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 const ServiceDetails = () => {
-    const [services, setServices] = useState([]);
-    useEffect(() => {
-      fetch('services.json')
-      .then(res => res.json())
-      .then(data => setServices(data))
-    }, []);
+  const { _id, service_name, photo, description, price } = useLoaderData();
   return (
-    <div>
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.
-      </p>
+    <div className=" bg-gray-100 dark:bg-gray-900 h-[80vh]">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 2xl-grid-cols-2 gap-5 md:justify-items-center">
+        <div className=" rounded-lg my-24 md:my-16">
+          <img className="" src={photo} alt="" />
+        </div>
+
+        <div className="max-w-xl" >
+          <h1 class=" my-16 md:my-6 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-5xl dark:text-white">
+            {service_name}
+          </h1>
+          <p className="text-xl text-gray-700 dark:text-gray-400">
+            {description}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
