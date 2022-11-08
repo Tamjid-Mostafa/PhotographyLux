@@ -1,0 +1,26 @@
+[
+    {
+        "package_name": "Basic",
+        "pakage_price": "$80"
+    },
+    {
+        "package_name": "Silver",
+        "pakage_price": "$140"
+    },
+    {
+        "package_name": "Bronze",
+        "pakage_price": "$300"
+    },
+    {
+        "package_name": "Gold",
+        "pakage_price": "$400"
+    },
+    {
+        "package_name": "Diamond",
+        "pakage_price": "$800"
+    },
+    {
+        "package_name": "Plutinum",
+        "pakage_price": "$990"
+    }
+]

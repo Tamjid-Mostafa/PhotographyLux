@@ -62,11 +62,6 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  /* Email Verification */
-  const verifyEmail = () => {
-    setLoading(true);
-    return sendEmailVerification(auth.currentUser);
-  };
 
   /* Forgot Password */
   const providerForgotPassword = (email) => {
@@ -84,9 +79,11 @@ const AuthProvider = ({ children }) => {
     providerSignOut,
     updateUserProfile,
     signIn,
-    verifyEmail,
     providerForgotPassword,
   };
+
+  
+
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

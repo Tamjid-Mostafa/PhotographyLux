@@ -35,6 +35,7 @@ const Header = () => {
               user?.uid ? (
                 <Avatar
                   alt="User settings"
+                  status="online"
                   img={user?.photoURL}
                   rounded={true}
                 />
