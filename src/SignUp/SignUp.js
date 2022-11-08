@@ -141,7 +141,7 @@ const SignUp = () => {
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Already, an User? go to{" "}
                   <Link
-                    to="/signup"
+                    to="/login"
                     className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                   >
                     Log In
@@ -151,7 +151,7 @@ const SignUp = () => {
               <div className="flex gap-2  items-center">
                 <button
                   onClick={handleGoogleSignIn}
-                  className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
+                  className="w-full max-w-xs font-bold shadow-sm rounded-lg p-1 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                 >
                   <div className="bg-white p-2 rounded-full">
                     <svg className="w-4" viewBox="0 0 533.5 544.3">
@@ -178,7 +178,7 @@ const SignUp = () => {
 
                 <button
                   onClick={providerGithubSignIn}
-                  className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline "
+                  className="w-full max-w-xs font-bold shadow-sm rounded-lg p-1 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline "
                 >
                   <div className="bg-white p-1 rounded-full">
                     <svg className="w-6" viewBox="0 0 32 32">
