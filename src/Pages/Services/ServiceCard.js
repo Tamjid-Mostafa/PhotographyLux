@@ -5,6 +5,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const ServiceCard = ({ service }) => {
   const { _id, photo, service_name, description, price } = service;
+
   return (
       <div className="relative max-w-sm h-[32rem] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <PhotoProvider

@@ -1,170 +1,153 @@
 [
     {
         "itemId": "0",
+        "service_name": "Corporate & Professional Photography",
         "name": "Violet Graves",
         "picture": "https://randomuser.me/api/portraits/men/3.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "1",
+        "service_name": "Pre/Post Wedding Photography",
         "name": "Corina Levine",
         "picture": "https://randomuser.me/api/portraits/men/74.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "0",
+        "service_name": "Corporate & Professional Photography",
         "name": "Mindy Powell",
         "picture": "https://randomuser.me/api/portraits/men/3.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
-        "itemId": "1",
+        "itemId": "5",
+        "service_name": "Wedding Photography",
         "name": "Fry Herman",
         "picture": "https://randomuser.me/api/portraits/men/4.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "0",
+        "service_name": "Corporate & Professional Photography",
         "name": "Jacklyn Gamble",
         "picture": "https://randomuser.me/api/portraits/men/3.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
-        "itemId": "1",
+        "itemId": "5",
+        "service_name": "Wedding Photography",
         "name": "Herring Wilson",
         "picture": "https://randomuser.me/api/portraits/men/34.jpg",
         "text": "Culpa dolore enim elit occaecat amet sunt nisi labore reprehenderit enim esse et. Ut et aliqua consectetur irure irure ad tempor non. Nulla consectetur cupidatat duis ex cillum non mollit deserunt. Officia sint incididunt nulla velit id. Voluptate est ipsum Lorem in eiusmod qui aliquip minim dolor irure adipisicing nisi irure.\r\n"
     },
     {
         "itemId": "2",
+        "service_name": "Fashion Photography",
         "name": "Brandie Shields",
         "picture": "https://randomuser.me/api/portraits/men/23.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
-        "itemId": "3",
+        "itemId": "5",
+        "service_name": "Wedding Photography",
         "name": "Gordon Silva",
         "picture": "https://randomuser.me/api/portraits/men/67.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "0",
+        "service_name": "Corporate & Professional Photography",
         "name": "Silvia Foster",
         "picture": "https://randomuser.me/api/portraits/men/1.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "1",
+        "service_name": "Pre/Post Wedding Photography",
         "name": "Clara Puckett",
         "picture": "https://randomuser.me/api/portraits/men/3.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "2",
+        "service_name": "Fashion Photography",
         "name": "Kristen Mcguire",
         "picture": "https://randomuser.me/api/portraits/men/9.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "3",
+        "service_name": "Food Photography",
         "name": "Bethany Scott",
         "picture": "https://randomuser.me/api/portraits/men/6.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "0",
+        "service_name": "Corporate & Professional Photography",
         "name": "Goodman Bullock",
         "picture": "https://randomuser.me/api/portraits/men/22.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "1",
+        "service_name": "Pre/Post Wedding Photography",
         "name": "Franco Miranda",
         "picture": "https://randomuser.me/api/portraits/men/76.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "2",
+        "service_name": "Fashion Photography",
         "name": "Ana Dennis",
         "picture": "https://randomuser.me/api/portraits/men/34.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "3",
+        "service_name": "Food Photography",
         "name": "Saundra Richard",
         "picture": "https://randomuser.me/api/portraits/men/52.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "4",
+        "service_name": "Product Photography",
         "name": "Lesa Hubbard",
         "picture": "https://randomuser.me/api/portraits/men/22.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "0",
+        "service_name": "Corporate & Professional Photography",
         "name": "Kayla Duke",
         "picture": "https://randomuser.me/api/portraits/men/87.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     },
     {
         "itemId": "1",
+        "service_name": "Pre/Post Wedding Photography",
         "name": "Marcie Whitley",
         "picture": "https://randomuser.me/api/portraits/men/23.jpg",
-        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!",
-        "rating": "",
-        "reviewerName": "",
-        "reviewerEmail": ""
+        "text": "I don't know what else to say. I wish I would have thought of it first. The best on the net! Photography is awesome!"
+        
     }
 ]

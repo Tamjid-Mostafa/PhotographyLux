@@ -75,7 +75,6 @@ const Header = () => {
           <Navbar.Link active={true}>
             <Link to="/">Home</Link>
           </Navbar.Link>
-          <Navbar.Link></Navbar.Link>
           <Navbar.Link>
             <Link to="/Services">Services</Link>
           </Navbar.Link>

@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import LogIn from "../Pages/LogIn/LogIn";
-import Review from "../Pages/Review/Review";
+import MyReviews from "../Pages/Review/MyReviews.js/MyReviews";
 import AllServices from "../Pages/Services/AllServices";
 import ServiceDetails from "../Pages/Services/ServiceDetails";
 import Services from "../Pages/Services/Services";
@@ -37,10 +37,11 @@ const router = createBrowserRouter([
       {
         path: "/all_services",
         element: <AllServices></AllServices>,
+        loader: () => fetch(`http://localhost:5000/services`)
       },
       {
-        path: "/reiews",
-        element: <Review></Review>
+        path: "/my_reviews",
+        element: <MyReviews></MyReviews>,
       },
     ],
   },

@@ -21,7 +21,7 @@ const AllServices = () => {
           </div>
           <div className="mt-16 justify-items-center grid gap-8 sm:w-2/3 sm:mx-auto md:w-full md:grid-cols-2  lg:grid-cols-3">
             {services.map((service) => (
-              <ServiceCard key={services._id} service={service}></ServiceCard>
+              <ServiceCard key={service._id} service={service}></ServiceCard>
             ))}
           </div>
         </div>
