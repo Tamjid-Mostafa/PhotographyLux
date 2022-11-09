@@ -6,7 +6,7 @@ const FooterBar = () => {
   return (
     <>
       <Navbar
-       container={true}  rounded={false}>
+       rounded={false}>
         <div className="w-full text-center">
           <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
             <Footer.Brand

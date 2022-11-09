@@ -24,7 +24,7 @@ const Header = () => {
         <Navbar.Brand>
           <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          <Link to="/">PhotographyLux</Link>
+            <Link to="/">PhotographyLux</Link>
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
@@ -79,16 +79,19 @@ const Header = () => {
           <Navbar.Link>
             <Link to="/Services">Services</Link>
           </Navbar.Link>
-          <Navbar.Link>
-            <Link to="/Pricing">Pricing</Link>
-          </Navbar.Link>
-          <Navbar.Link>
-            <Link to="/Contact">Contact</Link>
-          </Navbar.Link>
+
           {user?.uid ? (
-            <Navbar.Link>
-              <button onClick={handleSignOut}>Log Out</button>
-            </Navbar.Link>
+            <>
+              <Navbar.Link>
+                <Link to="/my_reviews">My Reviews</Link>
+              </Navbar.Link>
+              <Navbar.Link>
+                <Link to="/add_services">Add Services</Link>
+              </Navbar.Link>
+              <Navbar.Link>
+                <button onClick={handleSignOut}>Log Out</button>
+              </Navbar.Link>
+            </>
           ) : (
             <>
               <Navbar.Link>
