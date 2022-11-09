@@ -1,4 +1,3 @@
-import { Card } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -7,7 +6,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 const ServiceCard = ({ service }) => {
   const { _id, photo, service_name, description, price } = service;
   return (
-      <div class="relative max-w-sm h-[32rem] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="relative max-w-sm h-[32rem] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <PhotoProvider
           speed={() => 1000}
           easing={(type) =>
@@ -21,7 +20,7 @@ const ServiceCard = ({ service }) => {
             <img className="rounded-t-lg" src={photo} alt="" />
           </PhotoView>
         </PhotoProvider>
-        <div class="p-5">
+        <div className="p-5">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {service_name}
           </h5>
