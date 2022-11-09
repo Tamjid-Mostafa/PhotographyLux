@@ -76,7 +76,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </Navbar.Link>
           <Navbar.Link>
-            <Link to="/Services">Services</Link>
+            <Link to="/all_services">Services</Link>
           </Navbar.Link>
 
           {user?.uid ? (
@@ -86,6 +86,9 @@ const Header = () => {
               </Navbar.Link>
               <Navbar.Link>
                 <Link to="/add_services">Add Services</Link>
+              </Navbar.Link>
+              <Navbar.Link>
+                <Link to="/blogs">Blogs</Link>
               </Navbar.Link>
               <Navbar.Link>
                 <button onClick={handleSignOut}>Log Out</button>

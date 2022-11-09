@@ -17,7 +17,7 @@ const PackagePriceTable = () => {
             Pricing
           </p>
           <h2 className="my-5 text-2xl font-semibold text-gray-800 dark:text-white md:text-4xl">
-          Choose Our Packages
+          Choose Custom Packages
           </h2>
           <p className="text-lg font-normal text-gray-800 dark:text-white md:text-xl">
           Whether you are looking for a food photography service for your website, cookbook, restaurant menu, social media, or any other purpose, we have got everything. We have designed different packages that will suit your needs and budget for sure.

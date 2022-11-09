@@ -23,7 +23,9 @@ const FooterBar = () => {
             </Footer.LinkGroup>
           </div>
           <Footer.Divider />
-          <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+          <Footer.Copyright
+          
+          by="PhotgraphyLux™" year={2022} />
         </div>
       </Navbar>
     </>

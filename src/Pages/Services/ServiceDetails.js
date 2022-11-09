@@ -5,13 +5,17 @@ import { useContext, useEffect, useState } from "react";
 import ReviewCard from "../Review/ReviewCard";
 import { HiChatAlt2 } from "react-icons/hi";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// import required modules
+import { Pagination } from "swiper";
+
 const ServiceDetails = () => {
-  const { user,loading,setLoading } = useContext(AuthContext);
+  const { user, loading, setLoading } = useContext(AuthContext);
   const { _id, service_name, photo, description, price, itemId } =
     useLoaderData();
   const [reviews, setReviews] = useState([]);
   console.log(reviews);
-
 
   useEffect(() => {
     fetch(`http://localhost:5000/reviews?service_name=${service_name}`)
@@ -46,7 +50,7 @@ const ServiceDetails = () => {
       .then((data) => {
         console.log(data);
         form.reset();
-        
+
         setLoading(true);
       })
       .catch((er) => console.error(er));
@@ -74,19 +78,46 @@ const ServiceDetails = () => {
 
       {/* Review Section */}
 
-      <div className="min-h-screen my-5  xl:container m-auto px-6 text-gray-600 dark:text-gray-300 md:px-12 xl:px-6">
+      <div className="my-5  xl:container m-auto px-6 text-gray-600 dark:text-gray-300 md:px-12 xl:px-6">
         <div className="py-16">
-          <div className="container m-auto px-6 text-gray-600 dark:text-gray-300 md:px-12 xl:px-6">
-            <div className="mb-20 space-y-4 px-6 md:px-0">
-              <h2 className="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
-                Here is some fans.
-              </h2>
-            </div>
-            <div className="md:columns-2 lg:columns-3 gap-8 space-y-8">
+          <div className="xl:container m-auto px-6 text-gray-600 dark:text-gray-300 md:px-12 xl:px-6">
+            <h2 className="mb-12 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+              What's our customers say
+            </h2>
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              className="swiper mySwiper"
+            >
               {reviews.map((review) => (
-                <ReviewCard key={review._id} review={review}></ReviewCard>
+                <SwiperSlide key={review._id} review={review}>
+                  <div className="swiper-wrapper pb-6">
+                    <div className="swiper-slide !bg-transparent">
+                      <div className="mx-auto space-y-6 text-center md:w-8/12 lg:w-7/12">
+                        <img
+                          className="mx-auto !h-16 !w-16 rounded-full"
+                          src={review.picture}
+                          alt="user avatar"
+                          height="220"
+                          width="220"
+                          loading="lazy"
+                        />
+                        <p className="text-lg w-2/4 mx-auto">
+                          <span className="font-serif">"</span>{review.text}<span className="font-serif">"</span>
+                        </p>
+                        <div>
+                          <h6 className="text-xl font-semibold leading-none mb-5">
+                            {review.name}
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
               ))}
-            </div>
+
+              <div className="swiper-pagination"></div>
+            </Swiper>
           </div>
         </div>
       </div>
@@ -123,7 +154,7 @@ const ServiceDetails = () => {
                         />
                         <div className="absolute right-1">
                           <button className="relative flex h-10 w-10 sm:w-max ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
-                            <span className="hidden relative text-base font-semibold text-white dark:text-gray-200 sm:block">
+                            <span className="hidden relative text-gray-800 dark:text-white font-semibold sm:block">
                               Submit
                             </span>
                             <svg
