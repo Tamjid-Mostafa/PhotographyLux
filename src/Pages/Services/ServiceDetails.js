@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import PackagePriceTable from "../PackagePrice/PackagePriceTable";
 import { AuthContext } from "../../context/AuthProvider";
 import { useContext, useEffect, useState } from "react";
@@ -8,13 +8,14 @@ import { HiChatAlt2 } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { Pagination } from "swiper";
+import toast from "react-hot-toast";
+
 
 const ServiceDetails = () => {
   const { user, loading, setLoading } = useContext(AuthContext);
   const { _id, service_name, photo, description, price, itemId } =
     useLoaderData();
   const [reviews, setReviews] = useState([]);
-  console.log(reviews);
 
   useEffect(() => {
     fetch(`http://localhost:5000/reviews?service_name=${service_name}`)
@@ -33,8 +34,9 @@ const ServiceDetails = () => {
       name: user?.displayName,
       picture: user?.photoURL,
       text: reviewSubmit,
-      userEmail: user?.email,
+      email: user?.email,
     };
+      
 
     // console.log(userReviews);
 
@@ -47,13 +49,18 @@ const ServiceDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         form.reset();
-
-        setLoading(true);
       })
       .catch((er) => console.error(er));
   };
+  const navigate = useNavigate();
+  const userHandle = () => {
+    if(!user?.uid){
+      toast.error("Please Log In to Submit Review");
+      navigate('/login');
+      
+    }
+  }
 
   return (
     <div className=" bg-gray-100 dark:bg-gray-900 ">
@@ -152,7 +159,7 @@ const ServiceDetails = () => {
                           className="focus:outline-none block w-full rounded-full placeholder-gray-500 bg-gray-100 dark:bg-gray-800 dark:border-gray-600 pl-12 pr-4 h-12 text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:ring-2 focus:ring-primary"
                         />
                         <div className="absolute right-1">
-                          <button className="relative flex h-10 w-10 sm:w-max ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
+                          <button onClick={userHandle} className="relative flex h-10 w-10 sm:w-max ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
                             <span className="hidden relative text-gray-800 dark:text-white font-semibold sm:block">
                               Submit
                             </span>

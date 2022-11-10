@@ -2,6 +2,7 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { JWTAuth } from "../../Auth/JWTAuth";
 import { AuthContext } from "../../context/AuthProvider";
 import logo from "../../logo.png";
 
@@ -24,6 +25,7 @@ const LogIn = () => {
     providerGoogleSignIn(googleProvider)
       .then((result) => {
         const user = result.user;
+        JWTAuth(user);
         console.log(user);
       })
       .catch((error) => console.error(error));
@@ -41,6 +43,7 @@ const LogIn = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+        JWTAuth(user);
         navigate(from, { replace: true });
         form.reset();
         setError("");

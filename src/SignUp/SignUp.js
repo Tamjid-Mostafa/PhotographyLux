@@ -1,7 +1,7 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../src/logo.png";
 import { AuthContext } from "../context/AuthProvider";
 
@@ -13,6 +13,10 @@ const SignUp = () => {
     providerCreateUser,
     updateUserProfile,
   } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
 
   /* -----------Google Sign In Handler------------ */
 
@@ -22,7 +26,7 @@ const SignUp = () => {
     providerGoogleSignIn(googleProvider)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };

@@ -1,18 +1,26 @@
-import { Table } from "flowbite-react";
 import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../../context/AuthProvider";
 import MyReviewRow from "./MyReviewRow";
 
 const MyReviews = () => {
-  const { user } = useContext(AuthContext);
+  const { user, providerSignOut } = useContext(AuthContext);
   const [myReviews, setMyReviews] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my_reviews?userEmail=${user?.email}`)
-      .then((res) => res.json())
+    fetch(`http://localhost:5000/my_reviews?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('photography-token')}`
+    }
+    })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          return providerSignOut();
+        }
+        return res.json()})
       .then((data) => setMyReviews(data));
-  }, [user?.email]);
+  }, [user?.email, providerSignOut]);
 
   const handleDelete = id => {
       const proceed = window.confirm('Confirm?')
@@ -36,6 +44,9 @@ const MyReviews = () => {
 
   }
 
+
+  
+
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <div className="py-12">
@@ -49,7 +60,11 @@ const MyReviews = () => {
           {myReviews.map((myReview) => <MyReviewRow 
           key={myReview._id}
           myReview={myReview}
+          myReviews={myReviews}
           handleDelete={handleDelete}
+          showModal={showModal}
+          setShowModal={setShowModal}
+
           ></MyReviewRow>
           )}
         </div>

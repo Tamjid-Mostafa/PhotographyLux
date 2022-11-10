@@ -78,12 +78,12 @@ const Header = () => {
           <Navbar.Link>
             <Link to="/all_services">Services</Link>
           </Navbar.Link>
+          <Navbar.Link>
+            <Link to="/my_reviews">My Reviews</Link>
+          </Navbar.Link>
 
           {user?.uid ? (
             <>
-              <Navbar.Link>
-                <Link to="/my_reviews">My Reviews</Link>
-              </Navbar.Link>
               <Navbar.Link>
                 <Link to="/add_services">Add Services</Link>
               </Navbar.Link>
