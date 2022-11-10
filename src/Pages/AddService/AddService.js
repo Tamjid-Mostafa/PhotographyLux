@@ -28,7 +28,7 @@ const AddService = () => {
     }
     console.log(service);
 
-    fetch("http://localhost:5000/services",
+    fetch("https://photographylux-server.vercel.app/services",
       {
         method: "POST",
         headers: {

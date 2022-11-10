@@ -4,7 +4,7 @@ const FoodPhoto = () => {
 
   const [foodPhoto, setFoodPhoto] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/foodPhotos`)
+    fetch(`https://photographylux-server.vercel.app/foodPhotos`)
       .then((res) => res.json())
       .then((data) => setFoodPhoto(data));
   }, []);

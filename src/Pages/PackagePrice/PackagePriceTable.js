@@ -4,7 +4,7 @@ const PackagePriceTable = () => {
   const [packagePrices, setPckagePrices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/packagePriceTable")
+    fetch("https://photographylux-server.vercel.app/packagePriceTable")
       .then((res) => res.json())
       .then((data) => setPckagePrices(data));
   });

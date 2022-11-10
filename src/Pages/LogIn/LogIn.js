@@ -5,10 +5,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { JWTAuth } from "../../Auth/JWTAuth";
 import { AuthContext } from "../../context/AuthProvider";
 import logo from "../../logo.png";
+import useTitle from "../hook/useTitle";
 
 const LogIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  useTitle('Log In');
   const [error, setError] = useState("");
   const {
     providerGoogleSignIn,
@@ -26,6 +28,7 @@ const LogIn = () => {
       .then((result) => {
         const user = result.user;
         JWTAuth(user);
+        navigate(from, { replace: true });
         console.log(user);
       })
       .catch((error) => console.error(error));

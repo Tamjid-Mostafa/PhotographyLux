@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const size = 3;
   useEffect(() => {
-    fetch(`http://localhost:5000/services?size=${size}`)
+    fetch(`https://photographylux-server.vercel.app/services?size=${size}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

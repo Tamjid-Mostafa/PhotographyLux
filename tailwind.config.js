@@ -6,7 +6,7 @@ module.exports = {
     // ...
     
   ],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     extend: {},
   },

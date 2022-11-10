@@ -6,10 +6,10 @@ import MyReviewRow from "./MyReviewRow";
 const MyReviews = () => {
   const { user, providerSignOut } = useContext(AuthContext);
   const [myReviews, setMyReviews] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my_reviews?email=${user?.email}`, {
+    fetch(`https://photographylux-server.vercel.app/my_reviews?email=${user?.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem('photography-token')}`
     }
@@ -26,7 +26,7 @@ const MyReviews = () => {
       const proceed = window.confirm('Confirm?')
       console.log(id);
       if(proceed){
-          fetch(`http://localhost:5000/my_reviews/${id}`,{
+          fetch(`https://photographylux-server.vercel.app/my_reviews/${id}`,{
             
                 method: 'DELETE'
           })
@@ -62,8 +62,6 @@ const MyReviews = () => {
           myReview={myReview}
           myReviews={myReviews}
           handleDelete={handleDelete}
-          showModal={showModal}
-          setShowModal={setShowModal}
 
           ></MyReviewRow>
           )}

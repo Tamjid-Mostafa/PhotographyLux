@@ -1,37 +1,30 @@
 import React, { useState } from "react";
 import { HiChatAlt2 } from "react-icons/hi";
 
-const MyReviewRow = ({
-  handleDelete,
-  myReviews,
-  myReview,
-  setMyReviews,
-  showModal,
-  setShowModal,
-}) => {
+const MyReviewRow = ({ handleDelete, myReviews, myReview, setMyReviews }) => {
   const { _id } = myReview;
 
+  const [showModal, setShowModal] = useState(false);
   const handleSubmitReview = (event) => {
     event.preventDefault();
 
     const userReview = {
-      text: event.target.value,
+      text: event.target.review.value,
     };
     console.log(userReview);
 
-    fetch(`http://localhost:5000/my_reviews/${_id}`, {
+    fetch(`https://photographylux-server.vercel.app/my_reviews/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(),
+      body: JSON.stringify(userReview),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         const remaining = myReviews.filter((myReview) => myReview._id !== _id);
         const updated = myReviews.find((myReview) => myReview._id !== _id);
-        updated.status = "Updated";
 
         const updatedList = [updated, ...remaining];
         setMyReviews(updatedList);
@@ -106,8 +99,6 @@ const MyReviewRow = ({
                                   <input
                                     type="text"
                                     name="review"
-                                    id="review"
-                                    autoComplete="review"
                                     placeholder="Very Awesome"
                                     className="focus:outline-none block w-full rounded-full placeholder-gray-500 bg-gray-100 dark:bg-gray-800 dark:border-gray-600 pl-12 pr-4 h-12 text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:ring-2 focus:ring-primary"
                                   />
@@ -122,9 +113,9 @@ const MyReviewRow = ({
                                   Close
                                 </button>
                                 <button
-                                  onSubmit={() => setShowModal(false)}
+                                  type="submit"
                                   className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                  type="button"
+                                  
                                 >
                                   Save Changes
                                 </button>

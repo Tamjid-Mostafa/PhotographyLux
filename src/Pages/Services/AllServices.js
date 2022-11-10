@@ -6,10 +6,10 @@ const AllServices = () => {
   const [loading, setLoading] =useState(false);
   const [services, setServices] = useState([]);
 
-  
+
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/services`)
+    fetch(`https://photographylux-server.vercel.app/services`)
       .then((res) => res.json())
       .then((data) => {
         setServices(data);

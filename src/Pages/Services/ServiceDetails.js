@@ -18,7 +18,7 @@ const ServiceDetails = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?service_name=${service_name}`)
+    fetch(`https://photographylux-server.vercel.app/reviews?service_name=${service_name}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [service_name]);
@@ -40,7 +40,7 @@ const ServiceDetails = () => {
 
     // console.log(userReviews);
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://photographylux-server.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -49,7 +49,12 @@ const ServiceDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        form.reset();
+        if(data.acknowledged){
+          const allReviews = [...reviews, userReviews];setReviews(allReviews);
+          toast.success('Thanks or your feedback');
+          form.reset();
+          
+        }
       })
       .catch((er) => console.error(er));
   };
