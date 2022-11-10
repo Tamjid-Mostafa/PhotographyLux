@@ -13,10 +13,10 @@ const Blogs = () => {
               Blogs
             </h2>
 
-            <div class="py-16">
-              <div class="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-                <div class="grid gap-12 md:gap-6 md:grid-cols-1 lg:gap-12">
-                  <div class="group space-y-6">
+            <div className="py-16">
+              <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+                <div className="grid gap-12 md:gap-6 md:grid-cols-1 lg:gap-12">
+                  <div className="group space-y-6">
                     <PhotoProvider
                       speed={() => 1000}
                       easing={(type) =>
@@ -33,15 +33,15 @@ const Blogs = () => {
                           loading="lazy"
                           width="1000"
                           height="667"
-                          class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
+                          className="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
                         />
                       </PhotoView>
                     </PhotoProvider>
 
-                    <h3 class="text-3xl font-semibold text-gray-800 dark:text-white">
+                    <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
                       Difference between SQL and NoSQL
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300">
                       SQL is ther programming language use to interface with
                       relational databases. <br />
                       The main differences between SQL and NoSQL: <br />
@@ -84,31 +84,31 @@ const Blogs = () => {
                         Availability and Partition tolerance).
                       </small>
                     </p>
-                    <div class="flex gap-6 items-center">
+                    <div className="flex gap-6 items-center">
                       <a
                         href="#"
-                        class="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        className="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
                       >
                         <img
-                          class="w-8 h-8 object-cover rounded-full"
+                          className="w-8 h-8 object-cover rounded-full"
                           src={ user?.photoURL }
                           alt=""
                         />
-                        <span class="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
+                        <span className="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
                           {user?.displayName}
                         </span>
                       </a>
-                      <span class="w-max block font-light text-gray-500 sm:mt-0">
+                      <span className="w-max block font-light text-gray-500 sm:mt-0">
                         Aug 27 2022
                       </span>
-                      <div class="flex gap-2 items-center text-gray-500">
+                      <div className="flex gap-2 items-center text-gray-500">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="w-5 h-5 text-gray-400 dark:text-gray-600"
+                          className="w-5 h-5 text-gray-400 dark:text-gray-600"
                         >
                           <path
                             stroke-linecap="round"
@@ -120,7 +120,7 @@ const Blogs = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="group space-y-6">
+                  <div className="group space-y-6">
                     <PhotoProvider
                       speed={() => 1000}
                       easing={(type) =>
@@ -137,45 +137,45 @@ const Blogs = () => {
                           loading="lazy"
                           width="1000"
                           height="667"
-                          class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
+                          className="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
                         />
                       </PhotoView>
                     </PhotoProvider>
-                    <h3 class="text-3xl font-semibold text-gray-800 dark:text-white">
+                    <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
                       What is JWT, and how does it work?
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300">
                       JSON Web Token (JWT) is an open standard (RFC 7519) that
                       defines a compact and self-contained way for securely
                       transmitting information between parties as a JSON object.
                       This information can be verified and trusted because it is
                       digitally signed.
                     </p>
-                    <div class="flex flex-wrap gap-6 items-center">
+                    <div className="flex flex-wrap gap-6 items-center">
                       <a
                         href="#"
-                        class="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        className="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
                       >
                         <img
-                          class="w-8 h-8 object-cover rounded-full"
+                          className="w-8 h-8 object-cover rounded-full"
                           src={ user?.photoURL }
                           alt=""
                         />
-                        <span class="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
+                        <span className="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
                         {user?.displayName}
                         </span>
                       </a>
-                      <span class="w-max block font-light text-gray-500 sm:mt-0">
+                      <span className="w-max block font-light text-gray-500 sm:mt-0">
                         Aug 27 2022
                       </span>
-                      <div class="flex gap-2 items-center text-gray-500">
+                      <div className="flex gap-2 items-center text-gray-500">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="w-5 h-5 text-gray-400 dark:text-gray-600"
+                          className="w-5 h-5 text-gray-400 dark:text-gray-600"
                         >
                           <path
                             stroke-linecap="round"
@@ -187,7 +187,7 @@ const Blogs = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="group space-y-6">
+                  <div className="group space-y-6">
                     <PhotoProvider
                       speed={() => 1000}
                       easing={(type) =>
@@ -204,14 +204,14 @@ const Blogs = () => {
                           loading="lazy"
                           width="1000"
                           height="667"
-                          class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
+                          className="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
                         />
                       </PhotoView>
                     </PhotoProvider>
-                    <h3 class="text-3xl font-semibold text-gray-800 dark:text-white">
+                    <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
                       What is the difference between javascript and NodeJS?
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300">
                       JavaScript is a client-side scripting language that is
                       lightweight, cross-platform, and interpreted. Both Java
                       and HTML include it. Node.js, on the other hand, Node.js
@@ -223,31 +223,31 @@ const Blogs = () => {
                       interpreter or execution environment for the JavaScript
                       programming language.
                     </p>
-                    <div class="flex flex-wrap gap-6 items-center">
+                    <div className="flex flex-wrap gap-6 items-center">
                       <a
                         href="#"
-                        class="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        className="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
                       >
                         <img
-                          class="w-8 h-8 object-cover rounded-full"
+                          className="w-8 h-8 object-cover rounded-full"
                           src={ user?.photoURL }
                           alt=""
                         />
-                        <span class="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
+                        <span className="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
                         {user?.displayName}
                         </span>
                       </a>
-                      <span class="w-max block font-light text-gray-500 sm:mt-0">
+                      <span className="w-max block font-light text-gray-500 sm:mt-0">
                         Aug 27 2022
                       </span>
-                      <div class="flex gap-2 items-center text-gray-500">
+                      <div className="flex gap-2 items-center text-gray-500">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="w-5 h-5 text-gray-400 dark:text-gray-600"
+                          className="w-5 h-5 text-gray-400 dark:text-gray-600"
                         >
                           <path
                             stroke-linecap="round"
@@ -259,7 +259,7 @@ const Blogs = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="group space-y-6">
+                  <div className="group space-y-6">
                     <PhotoProvider
                       speed={() => 1000}
                       easing={(type) =>
@@ -276,14 +276,14 @@ const Blogs = () => {
                           loading="lazy"
                           width="1000"
                           height="667"
-                          class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
+                          className="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
                         />
                       </PhotoView>
                     </PhotoProvider>
-                    <h3 class="text-3xl font-semibold text-gray-800 dark:text-white">
+                    <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
                       How does NodeJS handle multiple requests at the same time?
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300">
                       We know NodeJS application is single-threaded.
                       <br />
                       NodeJS receives multiple client requests and places them
@@ -298,31 +298,31 @@ const Blogs = () => {
                       is possible to process multiple requests parallelly using
                       the NodeJS cluster module or worker_threads module.
                     </p>
-                    <div class="flex flex-wrap gap-6 items-center">
+                    <div className="flex flex-wrap gap-6 items-center">
                       <a
                         href="#"
-                        class="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        className="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
                       >
                         <img
-                          class="w-8 h-8 object-cover rounded-full"
+                          className="w-8 h-8 object-cover rounded-full"
                           src={ user?.photoURL }
                           alt=""
                         />
-                        <span class="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
+                        <span className="hidden sm:block font-semibold text-base text-gray-600 dark:text-gray-200">
                         {user?.displayName}
                         </span>
                       </a>
-                      <span class="w-max block font-light text-gray-500 sm:mt-0">
+                      <span className="w-max block font-light text-gray-500 sm:mt-0">
                         Aug 27 2022
                       </span>
-                      <div class="flex gap-2 items-center text-gray-500">
+                      <div className="flex gap-2 items-center text-gray-500">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="w-5 h-5 text-gray-400 dark:text-gray-600"
+                          className="w-5 h-5 text-gray-400 dark:text-gray-600"
                         >
                           <path
                             stroke-linecap="round"

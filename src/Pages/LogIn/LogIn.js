@@ -78,7 +78,7 @@ const LogIn = () => {
               >
                 <div>
                   <label
-                    htmlFor="email"
+                    htmlhtmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Your email
@@ -98,7 +98,7 @@ const LogIn = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="password"
+                    htmlhtmlFor="password"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Password
@@ -125,7 +125,7 @@ const LogIn = () => {
                     </div>
                     <div className="ml-3 text-sm">
                       <label
-                        htmlFor="remember"
+                        htmlhtmlFor="remember"
                         className="text-gray-500 dark:text-gray-300"
                       >
                         Remember me

@@ -67,7 +67,7 @@ const Hero = () => {
                               id="devs20"
                             />
                             <label
-                              for="devs20"
+                              htmlFor="devs20"
                               className="block w-full cursor-pointer rounded-full bg-sky-50 dark:bg-gray-700 py-2 px-4 text-center text-sky-800 dark:text-sky-300 peer-checked:text-primary peer-checked:ring-1 peer-checked:ring-primary"
                             >
                               <span className="mx-auto text-sm font-semibold">
@@ -90,7 +90,7 @@ const Hero = () => {
                               id="devs15"
                             />
                             <label
-                              for="devs15"
+                              htmlFor="devs15"
                               className="block cursor-pointer rounded-full bg-sky-50 dark:bg-gray-700 py-2 px-4 text-center text-sky-800 dark:text-sky-300 peer-checked:text-primary peer-checked:ring-1 peer-checked:ring-primary"
                             >
                               <span className="mx-auto block w-max text-sm font-semibold">
@@ -113,7 +113,7 @@ const Hero = () => {
                               id="devs10"
                             />
                             <label
-                              for="devs10"
+                              htmlFor="devs10"
                               className="block cursor-pointer rounded-full bg-sky-50 dark:bg-gray-700 py-2 px-4 text-center text-sky-800 dark:text-sky-300 peer-checked:text-primary peer-checked:ring-1 peer-checked:ring-primary"
                             >
                               <span className="mx-auto block w-max text-sm font-semibold">
@@ -136,7 +136,7 @@ const Hero = () => {
                               id="devs5"
                             />
                             <label
-                              for="devs5"
+                              htmlFor="devs5"
                               className="block cursor-pointer rounded-full bg-sky-50 dark:bg-gray-700 py-2 px-4 text-center text-sky-800 dark:text-sky-300 peer-checked:text-primary peer-checked:ring-1 peer-checked:ring-primary"
                             >
                               <span className="mx-auto block w-max text-sm font-semibold">

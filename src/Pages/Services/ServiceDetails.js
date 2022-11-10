@@ -2,7 +2,6 @@ import { useLoaderData } from "react-router-dom";
 import PackagePriceTable from "../PackagePrice/PackagePriceTable";
 import { AuthContext } from "../../context/AuthProvider";
 import { useContext, useEffect, useState } from "react";
-import ReviewCard from "../Review/ReviewCard";
 import { HiChatAlt2 } from "react-icons/hi";
 
 // Import Swiper React components
