@@ -15,6 +15,7 @@ const LogIn = () => {
   const {
     providerGoogleSignIn,
     signIn,
+    loading,
     setLoading,
   } = useContext(AuthContext);
   const from = location.state?.from?.pathname || "/";
@@ -64,7 +65,12 @@ const LogIn = () => {
 
   return (
     <div>
-      <section className="bg-gray-50 dark:bg-gray-900">
+      {loading ? (
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-cyan-600"></div>
+        </div>
+      ) : (
+        <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div
             className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
@@ -194,6 +200,7 @@ const LogIn = () => {
           </div>
         </div>
       </section>
+      )}
     </div>
   );
 };

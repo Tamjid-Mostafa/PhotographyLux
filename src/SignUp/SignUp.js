@@ -12,6 +12,7 @@ const SignUp = () => {
     providerGithubSignIn,
     providerCreateUser,
     updateUserProfile,
+    loading, setLoading
   } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -52,12 +53,20 @@ const SignUp = () => {
         console.error(error);
         setError(error.message);
         toast.error(error.message.slice(22, -2));
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
   return (
     <div>
-      <section className="bg-gray-50 dark:bg-gray-900">
+      {loading ? (
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-cyan-600"></div>
+        </div>
+      ) : (
+        <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <Link
             to="/"
@@ -185,6 +194,7 @@ const SignUp = () => {
           </div>
         </div>
       </section>
+      )}
     </div>
   );
 };
