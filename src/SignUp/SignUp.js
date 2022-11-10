@@ -4,8 +4,11 @@ import toast from "react-hot-toast";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../src/logo.png";
 import { AuthContext } from "../context/AuthProvider";
+import useTitle from "../Pages/hook/useTitle";
+
 
 const SignUp = () => {
+  useTitle('Sign Up');
   const [error, setError] = useState("");
   const {
     providerGoogleSignIn,
