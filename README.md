@@ -1,7 +1,8 @@
-Live Site Link: https://photographylux-22fb4.web.app/
+- [Live Site](https://photographylux-22fb4.web.app/)
+
 
 # Photography - LUX
-A Photography service showcase website.
+A service showcase website.
 
 
 ## Authors
@@ -24,7 +25,8 @@ A Photography service showcase website.
 * use Hook for Tittle.
 
 
+
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+![App Screenshot](https://i.ibb.co/BjnBSC2/photographylux-2.png)
+![App Screenshot](https://i.ibb.co/xLF6Zp7/photographylux-3.png)
